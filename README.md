@@ -1,5 +1,7 @@
 # pcRaper4000
 
+## **DO NOT RUN ON A REAL MACHINE**
+
 ## features:
 
 - **unclosable fullscreen app**
