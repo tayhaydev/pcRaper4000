@@ -6,6 +6,7 @@
 
 - **unclosable fullscreen app**
 - **disables task manager**
+- **disables cmd**
 - **copy itself to startup**
 - **blocks input**
 - **crtl alt del is not blocked, the users input does get unblocked on it, but if they try to close it will reblock the input**
