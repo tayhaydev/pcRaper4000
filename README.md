@@ -11,7 +11,6 @@
 ## todo:
 
 - **screen melting**
-- **turn off cmd**
 
 ## usage:
 
