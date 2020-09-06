@@ -1,20 +1,15 @@
-# pcRaper4000
+# 𝗽𝗰𝗥𝗮𝗽𝗲𝗿𝟰𝟬𝟬𝟬
 
-## **DO NOT RUN ON A REAL MACHINE**
+𝙛𝙚𝙖𝙩𝙪𝙧𝙚𝙨
+* unclosable fullscreen app
+* disables task manager
+* disables cmd
+* copy itself to startup
+* blocks input
+* crtl alt del is not blocked, the users input does get unblocked on it, but if they try to close it will reblock the input
 
-## features:
+𝙩𝙤𝙙𝙤
+* screen melting
 
-- **unclosable fullscreen app**
-- **disables task manager**
-- **disables cmd**
-- **copy itself to startup**
-- **blocks input**
-- **crtl alt del is not blocked, the users input does get unblocked on it, but if they try to close it will reblock the input**
-
-## todo:
-
-- **screen melting**
-
-## usage:
-
-- **just build, you can add functions you want, tried to make it organized for beginners**
+𝙪𝙨𝙖𝙜𝙚
+* just build, you can add functions you want, tried to make it organized for beginners
