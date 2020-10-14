@@ -1,15 +1,6 @@
 # 𝗽𝗰𝗥𝗮𝗽𝗲𝗿𝟰𝟬𝟬𝟬
 
-𝙛𝙚𝙖𝙩𝙪𝙧𝙚𝙨
-* unclosable fullscreen app
-* disables task manager
-* disables cmd
-* copy itself to startup
-* blocks input
-* crtl alt del is not blocked, the users input does get unblocked on it, but if they try to close it will reblock the input
+🚀 𝘂𝗽𝗹𝗼𝗮𝗱 𝘀𝘁𝘂𝗳𝗳 𝘁𝗼 𝗮𝗻𝗼𝗻𝗳𝗶𝗹𝗲𝘀.𝗰𝗼𝗺 𝗳𝗿𝗼𝗺 𝘆𝗼𝘂𝗿 𝗱𝗲𝘀𝗸𝘁𝗼𝗽
 
-𝙩𝙤𝙙𝙤
-* screen melting
-
-𝙪𝙨𝙖𝙜𝙚
+## preview<br>
 * just build, you can add functions you want, tried to make it organized for beginners
